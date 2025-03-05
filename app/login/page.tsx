@@ -11,8 +11,17 @@ import { Button } from '@/app/ui/button';
 import { Suspense, useActionState } from 'react';
 import { authenticate } from '@/app/lib/actions';
 import { useSearchParams } from 'next/navigation';
+
+export default function LoginFormWrapper() {
+  return (
+    // You could have a loading skeleton as the `fallback` too
+    <Suspense>
+      <LoginForm />
+    </Suspense>
+  )
+}
  
-export default function LoginForm() {
+function LoginForm() {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get('callbackUrl') || '/dashboard';
   const [errorMessage, formAction, isPending] = useActionState(
@@ -21,7 +30,6 @@ export default function LoginForm() {
   );
  
   return (
-    <Suspense>
     <form action={formAction} className="space-y-3">
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
         <h1 className={`${lusitana.className} mb-3 text-2xl`}>
@@ -86,6 +94,5 @@ export default function LoginForm() {
         </div>
       </div>
     </form>
-    </Suspense>
   );
 }
