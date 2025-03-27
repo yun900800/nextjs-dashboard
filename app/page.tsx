@@ -2,7 +2,7 @@ import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 //import styles from '@/app/ui/home.module.css';
-import { lusitana, roboto_mono,roboto,notoSansSC } from '@/app/ui/fonts';
+import { lusitana, roboto_mono,roboto } from '@/app/ui/fonts';
 import Image from 'next/image';
 
 
@@ -18,7 +18,7 @@ export default function Page() {
         `${roboto.className}`
       }
       ><span>this is a roboto font-family</span><br></br><span className={
-        `${notoSansSC.className}`
+        `${roboto_mono.className}`
       }>这是中文字体</span></h1>
       <p
       className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}

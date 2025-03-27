@@ -1,11 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 这个字体是在fonts中定义的 */
 html {
   font-family: var(--font-inter);
 }
- 
+/* 这个字体是在fonts中定义的 */
 h1 {
   font-family: var(--font-roboto-mono);
 }

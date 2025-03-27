@@ -21,7 +21,7 @@ export const roboto_mono = Roboto_Mono({
   display: 'swap',
 });
 
-export const notoSansSC = Noto_Sans_SC({
-  subsets: ["chinese-simplified"], // 仅加载简体中文，减少字体体积
-  weight: ["400", "700"], // 选择常用的 400 和 700
-});
+// export const notoSansSC = Noto_Sans_SC({
+//   subsets: ["chinese-simplified"], // 仅加载简体中文，减少字体体积
+//   weight: ["400", "700"], // 选择常用的 400 和 700
+// });
